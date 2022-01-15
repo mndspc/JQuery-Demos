@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JJQuery DOM Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                alert($("#test").text());
+            });
+
+            $("#btn2").click(function () {
+                alert($("#test").html());
+            });
+
+            $("#btn3").click(function () {
+                alert($("#msdn").attr("href"));
+            });
+
+            $("#btn4").click(function () {
+                $("#test").text("Welcome");
+            });
+
+            $("#btn5").click(function () {
+                $("#test").html("Welcome to <b>Java Script</b>");
+            });
+
+            $("#btn6").click(function () {
+               alert( $("#txt1").val());
+            });
+
+            $("#btn7").click(function () {
+                $("#txt1").val("This is new value");
+            });
+
+            $("#btn8").click(function () {
+                $("#p1").append("<b>This is appended text</b>");
+            });
+
+            $("#btn9").click(function () {
+                $("ol").append("<li>Item4</li>");
+            });
+
+
+            $("#btn10").click(function () {
+                var text1 = document.createElement("p");
+                text1.innerHTML = "This is p Element";
+                text1.css("");
+                $("body").append(text1);
+               
+            });
+
+            $("#btn11").click(function () {
+                $("#txt1").remove();
+
+            });
+
+            $("#btn12").click(function () {
+                $("#div1").empty();
+
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <p id="test">This is some <b>bold</b> text in a paragraph</p>
+    <button id="btn1">Show Text</button>
+    <button id="btn2">Show HTML</button>
+    <button id="btn3">Show Attribute value</button>
+    <button id="btn4">Set Text</button>
+    <button id="btn5">Set HTML</button>
+    <button id="btn6">Show Value</button>
+    <button id="btn7">Set Value</button>
+    <button id="btn8">Append Text</button>
+    <button id="btn9">Append Ordered List</button>
+    <button id="btn10">Create Element</button>
+    <button id="btn11">Remove Element</button>
+    <button id="btn12">Remove Content</button>
+    <br />
+    <a href="https://www.msdn.com" id="msdn">MSDN</a>
+    <br />
+    <input type="text" id="txt1" value="This is default text" />
+    <p id="p1">This is Paragraph1</p>
+    <br />
+
+    <ol>
+        <li>Item1</li>
+        <li>Item2</li>
+        <li>Item3</li>
+    </ol>
+
+    <div id="div1" style="background-color:skyblue">This is Div content</div>
+</body>
+</html>

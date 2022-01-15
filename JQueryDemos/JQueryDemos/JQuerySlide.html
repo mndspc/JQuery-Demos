@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery Slide</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("#div3").click(function () {
+                $(this).slideDown();
+            });
+
+            $("#div2").click(function () {
+                $(this).slideUp("slow");
+            });
+
+            $("#div1").click(function () {
+                $(this).slideToggle("slow");
+            });
+
+            $("#div4").click(function () {
+                $("#div5").slideUp(5000);
+            });
+
+            $("button").click(function () {
+                $("#div5").stop();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="div1" style="background-color:maroon;color:white">This is Div1</div>
+    <div id="div2" style="background-color:skyblue;color:blue">This is Div2</div>
+    <div id="div3" style="background-color:darkolivegreen;color:white">This is Div3</div>
+    <br /><br />
+    
+    <div id="div4" style="background-color:yellow;color:black">Click here to Slide Down</div>
+    <button>Stop</button>
+    <br /><br />
+    <div id="div5" style="background-color:yellow;color:black">This is Div5</div>
+</body>
+</html>

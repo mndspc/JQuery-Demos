@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JQuery Selector Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+        .myP{
+            background-color:blue;
+            color:bisque;
+        }
+
+    </style>
+    <script>
+        $(document).ready(function () {
+
+            $("div").click(function () {
+                $(this).hide();
+            });
+
+            $("#btn1").click(function () {
+                $("div").hide();
+            });
+
+            $("#btn2").click(function () {
+                $("div").show();
+            });
+
+            $("#btn3").click(function () {
+                $(".myP").hide();
+            });
+
+            $("h3").on({
+                mouseenter: function () { $(this).css("background-color", "lightgray") },
+                mouseleave: function () {$(this).css("background-color","yellow") }
+            });
+
+            $("[href]").click(function () {
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>This is Div1</div>
+    <div>This is Div2</div>
+    <button id="btn1">HIDE</button>
+    <button id="btn2">SHOW</button>
+    <button id="btn3">HIDE</button>
+    <p class="myP">This is Paragraph.</p>
+    <div class="myP">This is div</div>
+    <br />
+    <span class="myP">This is Span</span>
+    <br />
+   <h3>This is Heading3</h3>
+    <a href="IntroToJQuery.html">Intro to JQuery</a>
+</body>
+</html>
